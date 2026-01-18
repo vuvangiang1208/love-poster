@@ -171,7 +171,7 @@ const App: React.FC = () => {
               <div className="mb-16">
                 <div className="flex items-center justify-center md:justify-start gap-4 mb-10 opacity-80">
                   <div className="h-[1px] w-12 bg-rose-500"></div>
-                  <h3 className="text-rose-400 font-bold uppercase tracking-[0.5em] text-xs">DIỄN VĂN CỦA TRÁI TIM</h3>
+                  <h3 className="text-rose-400 font-bold uppercase tracking-[0.5em] text-xs">LỜI TỪ TRÁI TIM ANH</h3>
                 </div>
                 
                 <div className="text-4xl md:text-7xl font-calligraphy text-white leading-[1.3] md:leading-[1.5] drop-shadow-2xl">
