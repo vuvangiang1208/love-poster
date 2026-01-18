@@ -28,7 +28,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     id: 'sleeping-together',
     title: 'Cùng nhau chung giấc ngủ',
     subCaption: 'PEACEFUL HOME',
-    description: 'Bình yên không phải là thế giới ngoài kia im lặng, mà là khi trở về nhà, được thấy em bình yên ngủ ngon trong vòng tay anh.',
+    description: 'Bình yên không phải là thế giới ngoài kia im lặng, mà là khi hai ta ở bên nhau được thấy em bình yên ngủ ngon trong vòng tay anh.',
     icon: '🌙',
     color: 'from-indigo-600 to-purple-700',
     // Ảnh 3: Cặp đôi ôm nhau ngủ (Anime)
