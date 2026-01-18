@@ -11,7 +11,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     icon: '💖',
     color: 'from-rose-500 to-pink-600',
     // Ảnh 1: Tỏ tình dưới ánh hoàng hôn/sao (Anime)
-    imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/images/banner_0.png',
     imagePrompt: "Stunning romantic anime illustration of a couple standing on a hill during twilight, petals in the wind, soft glowing lights, deep emotional gaze, Makoto Shinkai style."
   },
   {
@@ -21,7 +21,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     description: 'Một nụ hôn sâu đậm thay cho ngàn lời hứa, gắn kết hai tâm hồn thành một khối duy nhất không thể tách rời.',
     icon: '💋',
     color: 'from-pink-500 to-rose-600',
-    imageUrl: 'https://images.unsplash.com/photo-1516589174184-c68526674fd6?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/images/banner_1.png',
     imagePrompt: "Masterpiece anime art of a couple sharing a passionate and sweet kiss under a cherry blossom tree, glowing atmosphere, cinematic lighting, incredibly romantic."
   },
   {
@@ -32,7 +32,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     icon: '🌙',
     color: 'from-indigo-600 to-purple-700',
     // Ảnh 3: Cặp đôi ôm nhau ngủ (Anime)
-    imageUrl: 'https://images.unsplash.com/photo-1544216717-3bbf52512659?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/images/banner_2.png',
     imagePrompt: "Cozy and warm anime illustration of a couple cuddling together in a sunlit room, sleeping peacefully, soft blankets, aesthetic atmosphere, Ghibli-inspired warmth."
   },
   {
@@ -43,7 +43,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     icon: '💓',
     color: 'from-red-500 to-rose-700',
     // Ảnh 4: Cái ôm sâu sắc (Anime)
-    imageUrl: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=1000',
+    imageUrl: '/images/banner_3.png',
     imagePrompt: "Breathtaking anime digital painting of a couple hugging tightly as silhouettes against a giant glowing moon and stars, magical particles, feeling of eternal love."
   }
 ];
