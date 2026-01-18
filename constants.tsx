@@ -50,7 +50,7 @@ export const ACHIEVEMENTS: Achievement[] = [
 
 // Cấu hình cho ảnh Poster chính (Ảnh điện thoại) - Cảnh hôn nhau rực rỡ phong cách Anime
 export const MAIN_POSTER_CONFIG = {
-  imageUrl: 'https://images.unsplash.com/photo-1534073828943-f801091bb18c?auto=format&fit=crop&q=80&w=1200',
+  imageUrl: '/images/banner_4.png',
   imagePrompt: 'A breathtaking cinematic wide-shot anime illustration of a couple sharing a long, passionate kiss at a grand sunset balcony overlooking a glowing city, hyper-detailed, emotional masterpiece, vibrant pink and purple clouds.'
 };
 
