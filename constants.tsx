@@ -56,6 +56,6 @@ export const MAIN_POSTER_CONFIG = {
 
 // "Diễn văn của trái tim" được fix cứng nội dung theo yêu cầu
 export const HARDCODED_POEM = {
-  poem: "Gửi người anh thương,\n\nNăm 2025 không chỉ là một cột mốc thời gian,\nMà là chương đẹp nhất trong cuốn tiểu thuyết của đời anh.\nTừ khoảnh khắc ta chạm mắt nhau cho đến nụ hôn nồng nàn,\nAnh nhận ra thế giới này chỉ thực sự rực rỡ khi có em.\n\nTừng giấc ngủ yên bình, từng nhịp đập trái tim hòa quyện,\nTất cả đều là minh chứng cho một tình yêu vĩnh cửu.\nCảm ơn em vì đã đến, đã ở lại và đã yêu anh,\nBằng tất cả chân thành và sự bao dung tuyệt vời nhất.",
+  poem: "Gửi người anh thương,\n\nNăm 2025 không chỉ là một cột mốc thời gian,\nMà là chương đẹp nhất trong cuốn tiểu thuyết của đời anh.\nTừ khoảnh khắc ta chạm mắt nhau cho đến nụ hôn nồng nàn,\nAnh nhận ra thế giới này chỉ thực sự rực rỡ khi có em.\n\nTừng giấc ngủ yên bình, từng nhịp đập trái tim hòa quyện,\nTất cả đều là minh chứng cho một tình yêu anh dành cho em.\nCảm ơn em vì đã đến, đã ở lại và đã thương anh và yêu anh, \nBằng tất cả chân thành và sự bao dung tuyệt vời nhất.",
   quote: "Cùng nhau, chúng ta sẽ biến năm 2025 và mọi năm sau đó trở thành một hành trình hạnh phúc không bao giờ kết thúc."
 };
