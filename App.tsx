@@ -4,7 +4,7 @@ import PosterCard from './components/PosterCard';
 import { generatePosterImage, generateSpecificImage } from './services/geminiService';
 import { AIPoemResponse } from './types';
 
-/**
+/** 
  * Thành phần Fireworks: Tạo hiệu ứng pháo hoa rực rỡ và lãng mạn trên Canvas.
  * Bao gồm cả pháo hoa hình tròn truyền thống và pháo hoa hình trái tim.
  */
