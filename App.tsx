@@ -199,7 +199,7 @@ const App: React.FC = () => {
       <footer className="py-32 text-center px-4 relative z-10">
         <div className="text-5xl mb-10 icon-glow animate-pulse">❤️</div>
         <h2 className="text-white font-calligraphy text-6xl md:text-8xl mb-6">
-          Anh yêu em rất nhiều!
+          Anh yêu em Trần Khánh Chi!
         </h2>
         <div className="flex flex-col items-center gap-4">
             <p className="font-serif-elegant text-rose-200/50 tracking-[0.3em] text-sm italic">Mãi mãi là bao xa? Là cho đến khi tim ngừng đập.</p>
