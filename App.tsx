@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { ACHIEVEMENTS, MAIN_POSTER_CONFIG, HARDCODED_POEM } from './constants';
 import PosterCard from './components/PosterCard';
@@ -19,7 +18,7 @@ const Fireworks = () => {
     if (!ctx) return;
 
     let animationId: number;
-    let particles: any[] = [];
+    let particles: Particle[] = [];
     
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -42,7 +41,7 @@ const Fireworks = () => {
         this.twinkle = Math.random() > 0.8;
 
         if (isHeart) {
-          // Công thức toán học tạo hình trái tim: x = 16sin^3(t), y = 13cos(t) - 5cos(2t) - 2cos(3t) - cos(4t)
+          // Công thức toán học tạo hình trái tim lãng mạn
           const t = angle;
           const heartX = 16 * Math.pow(Math.sin(t), 3);
           const heartY = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
@@ -62,7 +61,7 @@ const Fireworks = () => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         
-        const opacity = this.twinkle ? (Math.random() > 0.5 ? this.life : this.life * 0.4) : this.life;
+        const opacity = this.twinkle ? (Math.random() > 0.5 ? this.life : this.life * 0.3) : this.life;
         
         ctx.fillStyle = this.color;
         ctx.globalAlpha = opacity;
@@ -75,19 +74,19 @@ const Fireworks = () => {
       update() {
         this.x += this.sx;
         this.y += this.sy;
-        this.sy += 0.08; // Gravity
-        this.life -= 0.012; // Fade speed
+        this.sy += 0.08; // Trọng lực
+        this.life -= 0.012; // Phai dần
       }
     }
 
     const createFirework = () => {
       const x = Math.random() * canvas.width;
       const y = Math.random() * (canvas.height * 0.5) + (canvas.height * 0.1);
-      const isHeart = Math.random() > 0.5; // 50% cơ hội nổ hình trái tim
+      const isHeart = Math.random() > 0.4; // 60% cơ hội nổ hình trái tim
       const colors = ['#ff1e56', '#ffacb7', '#ffd700', '#ffffff', '#e879f9'];
       const color = colors[Math.floor(Math.random() * colors.length)];
       
-      const count = isHeart ? 90 : 70;
+      const count = isHeart ? 100 : 70;
       for (let i = 0; i < count; i++) {
         const angle = (i / count) * Math.PI * 2;
         particles.push(new Particle(x, y, color, isHeart, angle));
@@ -128,15 +127,15 @@ const Fireworks = () => {
  * Thành phần RosePetals: Tạo những cánh hoa hồng rơi lãng mạn.
  */
 const RosePetals = () => {
-  const petals = useMemo(() => [...Array(35)].map((_, i) => ({
+  const petals = useMemo(() => [...Array(40)].map((_, i) => ({
     id: i,
     left: Math.random() * 100,
-    size: 12 + Math.random() * 18,
+    size: 14 + Math.random() * 20,
     delay: Math.random() * 20,
-    duration: 10 + Math.random() * 15,
+    duration: 12 + Math.random() * 15,
     isDark: Math.random() > 0.5,
     rotation: Math.random() * 360,
-    sway: 30 + Math.random() * 50
+    sway: 40 + Math.random() * 60
   })), []);
 
   return (
@@ -144,7 +143,7 @@ const RosePetals = () => {
       {petals.map(p => (
         <div 
           key={p.id}
-          className={`rose-petal ${p.isDark ? 'bg-rose-600' : 'bg-pink-400'}`}
+          className={`rose-petal ${p.isDark ? 'bg-rose-600' : 'bg-pink-400/80'}`}
           style={{
             left: `${p.left}%`,
             width: `${p.size}px`,
@@ -174,7 +173,7 @@ const App: React.FC = () => {
   const [showFireworks, setShowFireworks] = useState(true);
 
   useEffect(() => {
-    // Tự động ẩn pháo hoa sau 10 giây
+    // Tự động ẩn pháo hoa sau 10 giây để nhìn rõ nội dung
     const fwTimer = setTimeout(() => setShowFireworks(false), 10000);
 
     const fetchData = async () => {
@@ -227,7 +226,7 @@ const App: React.FC = () => {
         <div className="relative z-10 max-w-5xl">
           <div className="flex justify-center mb-12 animate-pulse">
              <span className="inline-block px-10 py-3 rounded-full border border-rose-500/30 bg-rose-500/10 text-rose-300 text-[11px] font-black tracking-[0.5em] uppercase backdrop-blur-xl">
-              Chương Mới: Tình Yêu 2025
+              2025 • HÀNH TRÌNH HẠNH PHÚC
             </span>
           </div>
           
@@ -244,6 +243,11 @@ const App: React.FC = () => {
              <div className="w-2.5 h-2.5 rounded-full bg-rose-500/50"></div>
              <div className="w-2.5 h-2.5 rounded-full bg-rose-500/20"></div>
           </div>
+        </div>
+
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2 opacity-40">
+           <span className="text-[10px] tracking-widest font-black uppercase">Cuộn để xem tiếp</span>
+           <div className="w-[1px] h-12 bg-gradient-to-b from-rose-500 to-transparent"></div>
         </div>
       </section>
 
@@ -286,7 +290,6 @@ const App: React.FC = () => {
                   src={posterImg} 
                   alt="Romantic Vision 2025" 
                   className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
-                  onLoad={(e) => (e.currentTarget.style.opacity = '1')}
                   style={{ opacity: posterImg ? 1 : 0, transition: 'opacity 1.5s ease-in-out' }}
                 />
               )}
@@ -306,10 +309,7 @@ const App: React.FC = () => {
                 </div>
                 
                 <div className="text-4xl md:text-[4.5rem] font-calligraphy text-white leading-[1.6] md:leading-[1.8] drop-shadow-2xl whitespace-pre-line italic">
-                   {aiContent.poem.split('\n').map((line, i) => (
-                    <p key={i} className="mb-4">{line}</p>
-                  {aiContent.poem}
-                  ))}
+                   {aiContent.poem}
                 </div>
               </div>
 
